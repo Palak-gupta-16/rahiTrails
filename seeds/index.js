@@ -24,18 +24,12 @@ const seedDB = async ()=> {
             title: `${sample(descriptors)} ${sample(places)}`,
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit similique accusamus vitae perspiciatis ipsam saepe.",
             price,
-            images: [
-                {
-                    url: 'https://res.cloudinary.com/dcbo3qlh9/image/upload/v1727267471/RahiTrails/fs5ifoo8hh973ftgr3li.png',
-                    filename: 'RahiTrails/fs5ifoo8hh973ftgr3li',
+            geometry: { 
+                type: 'Point', coordinates: [ 77.401972, 23.258372 ]
                 },
-                {
-                    url: 'https://res.cloudinary.com/dcbo3qlh9/image/upload/v1727267471/RahiTrails/itsydqyngdvo3uevioy0.png',
-                    filename: 'RahiTrails/itsydqyngdvo3uevioy0',
-                },
-                {
-                    url: 'https://res.cloudinary.com/dcbo3qlh9/image/upload/v1727267472/RahiTrails/l6b61akubmy9nridj47g.png',
-                    filename: 'RahiTrails/l6b61akubmy9nridj47g',
+            images: [{
+                url: 'https://res.cloudinary.com/dcbo3qlh9/image/upload/v1727349147/RahiTrails/ax7jauoxeqvzn3ing0qp.jpg',
+                filename: 'RahiTrails/ax7jauoxeqvzn3ing0qp',
                 }]
         })
         await camp.save();
