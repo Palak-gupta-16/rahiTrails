@@ -7,7 +7,6 @@ const {cloudinary} = require("../cloudinary");
 
 module.exports.index = async(req,res)=> {
     const campgrounds = await Campground.find({});
-    console.log(campgrounds.images);
     res.render('campgrounds/index',{campgrounds})
 }
 
@@ -46,7 +45,7 @@ module.exports.showCampground = async (req, res,) => {
         req.flash('error', 'Cannot find that campground!');
         return res.redirect('/campgrounds');
     }
-    console.log(campground)
+    // console.log(campground)
     res.render('campgrounds/show', { campground });
 }
 

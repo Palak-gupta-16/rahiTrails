@@ -25,7 +25,10 @@ const seedDB = async ()=> {
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit similique accusamus vitae perspiciatis ipsam saepe.",
             price,
             geometry: { 
-                type: 'Point', coordinates: [ 77.401972, 23.258372 ]
+                type: 'Point', coordinates: [ 
+                    cities[random1000].longitude,
+                    cities[random1000].latitude
+                ]
                 },
             images: [{
                 url: 'https://res.cloudinary.com/dcbo3qlh9/image/upload/v1727349147/RahiTrails/ax7jauoxeqvzn3ing0qp.jpg',
@@ -33,7 +36,6 @@ const seedDB = async ()=> {
                 }]
         })
         await camp.save();
-        console.log(camp);
     }
 }
 
